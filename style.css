@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(assest/img-sunny-day.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  background-repeat: no-repeat;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    padding: 16px;
+    height: initial;
+    margin-top: 50px;
+  }
+
+}
+
+
+
+/* ----------------- Input ---------------- */
+
+.cityinput {
+  position: relative;
+  width: 500px;
+  backdrop-filter: blur(4px);
+}
+
+@media screen and (max-width: 760px) {
+  .cityinput {
+    width: 100%;
+  }
+}
+
+.cityinput input[type=text] {
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 20px;
+  outline: none;
+  width: 100%;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+::placeholder {
+  color: #ffffff5c;
+}
+
+.cityinput button {
+  position: absolute;
+  right: 20px;
+  background-color: #ffffff00;
+  border: none;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-top: 3px;
+}
+
+.cityinput button img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.cityinput button img:hover {
+  width: 24px;
+  opacity: 0.8;
+}
+
+/* ----------------- card of weather ---------------- */
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+
+}
+
+@media screen and (max-width: 760px) {
+  .weather-info {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 100px;
+    margin-top: 30px;
+   }
+}
+
+.weather-info>div {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+@media screen and (max-width: 760px) {
+  .weather-info>div {
+    flex-direction: row;
+  }
+}
+
+.wea-wrapper-card {
+  width: 280px;
+  text-align: center;
+  padding: 50px 0;
+  border-radius: 12px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+@media screen and (max-width: 760px) {
+  .wea-wrapper-card {
+    width: 100%;
+
+  }
+}
+
+h2 {
+  font-size: 42px;
+  padding-bottom: 12px;
+  font-weight: 500;
+}
+
+.wea-wrapper-card>p {
+  font-weight: thin;
+  opacity: 0.8;
+  ;
+}
+
+
+
+
+/* ----------------- card of temp center ---------------- */
+
+.we-temp-card {
+  padding-bottom: 36px;
+  padding-top: 36px;
+  width: 310px;
+  display: block !important;
+}
+
+
+@media screen and (max-width: 760px) {
+  .we-temp-card {
+    padding-bottom: 36px;
+    padding-top: 36px;
+    width: 100%;
+    flex-direction: column !important;
+    order: -1;
+    gap: 0 !important;
+  }
+}
+
+.we-temp-header {
+  display: flex;
+  justify-content: center;
+ }
+
+sup {
+  height: 100%;
+  display: flex;
+  align-items: end;
+  gap: 4px;
+  margin-top: 8px;
+  margin-left: 6px;
+}
+
+sup span {
+  font-size: 22px;
+}
+
+.we-temp-header h1 {
+  font-size: 66px;
+}
+
+.we-temp-card>p {
+  opacity: 1;
+  font-size: 28px;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+}
+
+.we-temp-card>img {
+  width: 63px;
+  margin: auto;
+}
+
+hr {
+  margin-block: 20px;
+  opacity: 0.2;
+}
+
+
+.we-temp-footer>div:first-child>p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.we-temp-footer>div:last-child {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.we-temp-footer>div:last-child img {
+  width: 16px;
+}
+
+@media screen and (max-width: 760px) {
+
+  .we-temp-card>p {
+    opacity: 1;
+    font-size: 36px;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+  }
+
+  .we-temp-footer>div:first-child>p {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+
+  .we-temp-footer>div:last-child {
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .we-temp-footer>div:last-child img {
+    width: 24px;
+
+  }
+
+  .we-temp-footer>div:last-child span {
+    font-size: 28px;
+  }
+
+}
+
+
+/* ----------------- error ---------------- */
+
+.errormsg {
+  color: rgb(255, 230, 230);
+  font-size: 18px;
+  font-weight: 300;
+  display: none;
+}
+
+.displayblockmsg {
+  display: block;
+}
